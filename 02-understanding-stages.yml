@@ -31,7 +31,7 @@ stages:
   jobs:
   - job: QADeploy
     steps:
-    - bash: echo $(QA)
+    - bash: echo $(Stage)
 - stage: PeridDeploy
   dependsOn:
   - DevDeploy
