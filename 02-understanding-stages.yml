@@ -33,11 +33,13 @@ stages:
     steps:
     - bash: echo $(Stage)
 - stage: PeridDeploy
+  variables:
+   Stage: PeriodDeploy
   dependsOn:
   - DevDeploy
   - QADeploy
   jobs:
   - job: PeridDeploy
     steps:
-    - bash: echo PeridDeploy   
+    - bash: echo $(Stage)   
   
